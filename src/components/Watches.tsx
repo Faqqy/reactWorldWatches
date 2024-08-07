@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import { IWatchType } from '../common/types';
 
-type WatchTypeProps = {
+interface IWatchTypeProps {
   data: IWatchType;
   onClose: (id: string) => void;
 }
 
-function Watch({ data, onClose }: WatchTypeProps) {
+function Watch({ data, onClose }: IWatchTypeProps) {
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {
